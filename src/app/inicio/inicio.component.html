@@ -50,55 +50,20 @@
   </section>
 
   <h2>Jogos em Promoção</h2>
+  <mat-grid-list cols="3" gutterSize="10px">
+  <mat-grid-tile *ngFor="let produto of produtos">
+    <mat-card class="example-card">
+      <img mat-card-image src="./assets/img/{{ produto.foto }}" alt="Imagem do produto">
 
-  <mat-grid-list cols="3">
-    <mat-grid-tile>
-      <mat-card class="example-card" appearance="outlined">
-        <img mat-card-image src="./assets/img/jogo1.PNG" alt="jogo 1" />
-        <mat-card-header>
-          <mat-card-title>jogo 1</mat-card-title>
-        </mat-card-header>
+      <mat-card-header>
+        <mat-card-title>{{ produto.produto }}</mat-card-title>
+      </mat-card-header>
 
-        <mat-card-content>
-          <p>Descrição do jogo</p>
-        </mat-card-content>
-        <mat-card-actions>
-          <p>R$ 300,00</p>
-          <button mat-button>Comprar</button>
-        </mat-card-actions>
-      </mat-card>
-    </mat-grid-tile>
-
-    <mat-grid-tile>
-      <mat-card class="example-card" appearance="outlined">
-        <img mat-card-image src="./assets/img/jogo2.PNG" alt="jogo 2" />
-        <mat-card-header>
-          <mat-card-title>jogo 2</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <p>Descrição do jogo</p>
-        </mat-card-content>
-        <mat-card-actions>
-          <p>R$ 200,00</p>
-          <button mat-button>Comprar</button>
-        </mat-card-actions>
-      </mat-card>
-    </mat-grid-tile>
-
-    <mat-grid-tile>
-      <mat-card class="example-card" appearance="outlined">
-        <img mat-card-image src="./assets/img/jogo3.PNG" alt="jogo 3" />
-        <mat-card-header>
-          <mat-card-title>jogo 3</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <p>Descrição do jogo</p>
-        </mat-card-content>
-        <mat-card-actions>
-          <p>R$ 400,00</p>
-          <button mat-button>Comprar</button>
-        </mat-card-actions>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+      <mat-card-content>
+        <p>{{ produto.descricao }}</p>
+        <p>{{ produto.preco | currency: 'BRL' }}</p>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
 </main>
