@@ -27,13 +27,8 @@
       "descricao": "Descrição do jogo 4",
       "foto": "jogo2.PNG",
       "preco": 0
-    },
-    {
-      "id": 0,
-      "produto": "jogo5",
-      "descricao": "descrição do jogo 5",
-      "foto": "jogo3.PNG",
-      "preco": 0
     }
+    // exclusão 
+   
   ]
 }
